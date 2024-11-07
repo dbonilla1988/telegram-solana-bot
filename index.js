@@ -1,5 +1,6 @@
-// Load environment variables
-require('dotenv').config();
+// index.js
+
+// Import necessary modules
 const TelegramBot = require('node-telegram-bot-api');
 const express = require('express');
 const Web3 = require('@solana/web3.js');
@@ -18,7 +19,7 @@ const PORT = process.env.PORT || 3000;
 
 // Check for Telegram Bot Token
 if (!token) {
-    console.error("🔴 ERROR: TELEGRAM_BOT_TOKEN is not defined in your .env file.");
+    console.error("🔴 ERROR: TELEGRAM_BOT_TOKEN is not defined in your environment variables.");
     process.exit(1);
 }
 
